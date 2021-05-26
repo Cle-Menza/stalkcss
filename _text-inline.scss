@@ -1,0 +1,97 @@
+a {
+  background-color: transparent;
+  color: $link;
+  cursor: pointer;
+  line-height: inherit;
+
+  strong {
+    color: currentColor;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: darken($link, 5%);
+  }
+
+  &:not([href]) {
+    color: inherit;
+    cursor: unset;
+  }
+}
+
+b,
+.b,
+strong,
+.strong {
+  font-weight: $weight-bold;
+}
+
+em,
+.em {
+  font-style: italic;
+}
+
+u {
+  text-decoration: underline;
+}
+
+small,
+.small {
+  font-size: 0.875em;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+
+abbr[title] {
+  position: relative;
+  border-bottom: none;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    border-bottom: thin dotted;
+  }
+}
+
+dfn {
+  font-style: normal;
+  font-weight: $weight-semibold;
+}
+
+mark {
+  padding: 0 0.25em;
+  background-color: yellow;
+}
+
+time,
+data {
+  font-weight: $weight-medium;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+ins {
+  font-weight: $weight-medium;
+}

@@ -1,0 +1,39 @@
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --link: #{$link};
+  --info: #{$info};
+  --success: #{$success};
+  --warning: #{$warning};
+  --danger: #{$danger};
+  --dark: #{$dark};
+  --text: #{$text};
+  --background: #{$background};
+  --spacer: #{$spacer};
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: $body-background-color;
+  color: $body-color;
+
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+  letter-spacing: .01em;
+
+  min-width: 320px;
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}

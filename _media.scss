@@ -1,0 +1,36 @@
+img {
+  border-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic; 
+}
+
+figure {
+  margin: $spacer 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: small;
+}
+
+video,
+canvas,
+object {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+audio {
+
+}
+
+svg {
+
+}

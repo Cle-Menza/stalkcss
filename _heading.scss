@@ -1,0 +1,13 @@
+@for $i from 1 through 6 {
+  h#{$i},
+  .h#{$i} {
+    margin-top: 0;
+    margin-bottom: $spacer;
+
+    font-family: $heading-font-family;
+    font-size: $heading-font-size + $heading-font-size-step * (6 - $i);
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    color: $heading-color;
+  }
+}

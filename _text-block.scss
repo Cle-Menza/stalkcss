@@ -1,0 +1,85 @@
+p {
+  margin-top: 0;
+  margin-bottom: $spacer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: $spacer;
+
+  ol,
+  ul,
+  dl {
+    padding-left: $spacer;
+    margin-bottom: 0;
+  }
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+blockquote {
+  margin-bottom: $spacer;
+  padding: $spacer $spacer * 1.25;
+  border-left: .3rem solid $grey-200;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+cite {
+  @extend small;
+  display: block;
+  color: $grey-400;
+
+  &::before {
+    content: "— ";
+  }
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  clear: both;
+  margin: ($spacer * 0.25) auto;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: .1rem solid $grey-200;
+  border-left: 0;
+}
+
+dl {
+  margin-bottom: $spacer;
+}
+
+dt {
+  margin-bottom: $spacer / 1.3;
+  font-weight: $weight-bold;
+}
+
+dd {
+  margin-bottom: $spacer / 1.3;
+  margin-left: 0;
+}
+
+details {
+  display: block;
+
+  &[open] {
+
+  }
+}
+
+summary {
+  display: list-item
+}

@@ -1,0 +1,69 @@
+$sm: 576px !default;
+$md: 768px !default;
+$lg: 990px !default;
+$xl: 1279px !default;
+
+$spacer: 16px !default;
+$breakpoints: (xs: 0, sm: $sm, md: $md, lg: $lg, xl: $xl) !default;
+
+$black: hsl(0, 0%, 0%) !default;
+$grey-950: hsl(0, 0%, 4%) !default;
+$grey-900: hsl(0, 0%, 7%) !default;
+$grey-800: hsl(0, 0%, 14%) !default;
+$grey-700: hsl(0, 0%, 21%) !default;
+$grey-600: hsl(0, 0%, 29%) !default;
+$grey-500: hsl(0, 0%, 48%) !default;
+$grey-400: hsl(0, 0%, 71%) !default;
+$grey-300: hsl(0, 0%, 86%) !default;
+$grey-200: hsl(0, 0%, 93%) !default;
+$grey-100: hsl(0, 0%, 96%) !default;
+$grey-50: hsl(0, 0%, 98%) !default;
+$white: hsl(0, 0%, 100%) !default;
+
+$primary: #485fc7 !default;
+$secondary: #3d9c18 !default;
+$link: #485fc7 !default;
+$info: #3e8ed0 !default;
+$success: #48c78e !default;
+$warning: #ffe08a !default;
+$danger: #f14668 !default;
+$dark: $grey-950 !default;
+$text: $grey-800 !default;
+$background: $white !default;
+
+$family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
+$family-secondary: $family-primary !default;
+$family-monospace: monospace !default;
+
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+
+$body-background-color: $background !default;
+$body-color: $text !default;
+$body-font-family: $family-primary !default;
+$body-font-size: 1.6em !default;
+$body-font-weight: $weight-normal !default;
+$body-line-height: 1.6 !default;
+
+$heading-color: $dark !default;
+$heading-font-family: $family-secondary !default;
+$heading-font-size-step: 6 !default;
+$heading-font-size: 18px !default; // h6 font size
+$heading-font-weight: $weight-bold !default;
+$heading-line-height: 1.25 !default;
+
+/* Radius */
+$radius-small: 2px !default;
+$radius: 4px !default;
+$radius-large: 6px !default;
+$radius-rounded: 9999px !default;
+
+/* Animation */
+$easing: cubic-bezier(0.075, 0.82, 0.165, 1) !default;
+$speed: 86ms !default;
+
+/* Shadow */
+$box-shadow: 0 5px 10px $grey-100;
