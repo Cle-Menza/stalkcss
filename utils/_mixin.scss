@@ -1,0 +1,53 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin horizontal-list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+}
+
+@mixin max($screen) {
+  $value: map-get($breakpoints, $screen);
+
+  @media (max-width: $value) {
+    @content;
+  }
+}
+
+@mixin min($screen) {
+  $value: map-get($breakpoints, $screen);
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin box-shadow($depth: 1, $color: $black) {
+  @if $depth == 2 {
+    $depth: 2;
+  } @else if $depth == 3 {
+    $depth: $depth + 1;
+  } @else if $depth == 4 {
+    $depth: $depth * 4;
+  } @else {
+    $depth: 1;
+  }
+
+  $x: 0;
+  $y: 1.6px * $depth;
+  $blur: 3.6px * $depth;
+
+  box-shadow:
+    rgba($color, 0.13) $x $y $blur,
+    rgba($color, 0.10) $x ($y / 5.3333) ($blur / 4);
+}
+
+@mixin transition($prop: "all") {
+  transition-property: $prop;
+  transition-duration: $speed;
+  transition-timing-function: $easing;
+}

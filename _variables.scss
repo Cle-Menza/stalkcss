@@ -1,10 +1,10 @@
-$sm: 576px !default;
-$md: 768px !default;
-$lg: 990px !default;
-$xl: 1279px !default;
+$mobile: 36rem !default; // 576px
+$tablet: 48rem !default; // 768px
+$desktop: 80rem !default; // 1280px
+$fullhd: 120rem !default; // 1920px
 
-$spacer: 16px !default;
-$breakpoints: (xs: 0, sm: $sm, md: $md, lg: $lg, xl: $xl) !default;
+$spacer: 1.6rem !default;
+$breakpoints: (mobile: $mobile, tablet: $tablet, desktop: $desktop, fullhd: $fullhd) !default;
 
 $black: hsl(0, 0%, 0%) !default;
 $grey-950: hsl(0, 0%, 4%) !default;
@@ -27,9 +27,40 @@ $info: #3e8ed0 !default;
 $success: #48c78e !default;
 $warning: #ffe08a !default;
 $danger: #f14668 !default;
-$dark: $grey-950 !default;
+$heading: $grey-950 !default;
 $text: $grey-800 !default;
 $background: $white !default;
+
+$greys: (
+  'black': $black,
+  'grey-950': $grey-950,
+  'grey-900': $grey-900,
+  'grey-800': $grey-800,
+  'grey-700': $grey-700,
+  'grey-600': $grey-600,
+  'grey-500': $grey-500,
+  'grey-400': $grey-400,
+  'grey-300': $grey-300,
+  'grey-200': $grey-200,
+  'grey-100': $grey-100,
+  'grey-50':  $grey-50,
+  'white': $white
+);
+
+/* Import */
+$colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'link': $link,
+  'info': $info,
+  'success': $success,
+  'warning': $warning,
+  'danger': $danger,
+  'heading': $heading,
+  'text': $text,
+  'background': $background,
+  //'spacer': $spacer
+);
 
 $family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
 $family-secondary: $family-primary !default;
@@ -41,29 +72,29 @@ $weight-medium: 500 !default;
 $weight-semibold: 600 !default;
 $weight-bold: 700 !default;
 
-$body-background-color: $background !default;
-$body-color: $text !default;
+$body-background-color: var(--background) !default;
+$body-color: var(--text) !default;
 $body-font-family: $family-primary !default;
-$body-font-size: 1.6em !default;
+$body-font-size: 1.6rem !default;
 $body-font-weight: $weight-normal !default;
 $body-line-height: 1.6 !default;
 
-$heading-color: $dark !default;
+$heading-color: var(--heading) !default;
 $heading-font-family: $family-secondary !default;
-$heading-font-size-step: 6 !default;
-$heading-font-size: 18px !default; // h6 font size
+$heading-font-size-step: 0.6 !default;
+$heading-font-size: 1.8rem !default; // h6 font size
 $heading-font-weight: $weight-bold !default;
 $heading-line-height: 1.25 !default;
 
 /* Radius */
-$radius-small: 2px !default;
-$radius: 4px !default;
-$radius-large: 6px !default;
+$radius-small: .2rem !default;
+$radius: .4rem !default;
+$radius-large: .6rem !default;
 $radius-rounded: 9999px !default;
 
 /* Animation */
 $easing: cubic-bezier(0.075, 0.82, 0.165, 1) !default;
-$speed: 86ms !default;
+$speed: 250ms !default;
 
 /* Shadow */
-$box-shadow: 0 5px 10px $grey-100;
+$box-shadow: 0 .4rem 1rem var(--grey-950);

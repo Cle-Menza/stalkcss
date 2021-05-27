@@ -1,14 +1,14 @@
 :root {
-  --primary: #{$primary};
-  --secondary: #{$secondary};
-  --link: #{$link};
-  --info: #{$info};
-  --success: #{$success};
-  --warning: #{$warning};
-  --danger: #{$danger};
-  --dark: #{$dark};
-  --text: #{$text};
-  --background: #{$background};
+  @each $name, $color in $colors {
+    --#{$name}-darken: #{darken($color, 5)};
+    --#{$name}: #{$color};
+    --#{$name}-lighten: #{lighten($color, 5)};
+  }
+
+  @each $name, $color in $greys {
+    --#{$name}: #{$color};
+  }
+
   --spacer: #{$spacer};
 }
 
@@ -28,9 +28,10 @@ body {
   font-family: $body-font-family;
   font-weight: $body-font-weight;
   line-height: $body-line-height;
+  font-size: $body-font-size;
   letter-spacing: .01em;
 
-  min-width: 320px;
+  min-width: 32rem;
   overflow-x: hidden;
 
   -webkit-font-smoothing: antialiased;

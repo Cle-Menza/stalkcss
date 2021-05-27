@@ -1,6 +1,6 @@
 a {
   background-color: transparent;
-  color: $link;
+  color: var(--link);
   cursor: pointer;
   line-height: inherit;
 
@@ -11,7 +11,7 @@ a {
   &:focus,
   &:hover,
   &:active {
-    color: darken($link, 5%);
+    color: var(--link-darken);
   }
 
   &:not([href]) {

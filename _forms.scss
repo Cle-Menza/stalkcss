@@ -9,8 +9,7 @@ fieldset {
   }
 
   legend {
-    margin: 0;
-    margin-left: -0.1875em;
+    margin: 0 0 0 -0.1875em;
     padding: 0 0.1875em;
   }
 }
@@ -54,11 +53,11 @@ label {
 ::-moz-placeholder,
 ::-ms-input-placeholder,
 ::placeholder {
-  color: $grey-500;
+  color: var(--text-lighten);
 }
 
 :focus::placeholder {
-  color: $grey-700;
+  color: var(--text-lighten);
 }
 
 button,
@@ -71,6 +70,9 @@ textarea {
   line-height: 1.15;
   margin: 0;
   max-width: 100%;
+  background-color: var(--background);
+  color: var(--text);
+  border: 0.1rem solid var(--text-darken)
 }
 
 button,
