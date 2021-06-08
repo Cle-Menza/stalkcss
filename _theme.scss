@@ -1,13 +1,14 @@
 .container {
   width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 $spacer;
 
-  @include min(tablet) {
-    max-width: $desktop;
-  }
-
-  @include min(desktop) {
-    max-width: $fullhd;
+  @each $breakpoint, $size in $container {
+    @if $size > 0 {
+      @include min($breakpoint) {
+        max-width: $size;
+      }
+    }
   }
 }

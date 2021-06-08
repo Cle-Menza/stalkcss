@@ -1,7 +1,7 @@
 fieldset {
   margin: $spacer 0;
   padding: $spacer;
-  border: 1px solid $grey-400;
+  border: 1px solid var(--grey-400);
 
   &[disabled] {
     pointer-events: none;
@@ -21,7 +21,7 @@ legend {
   padding: 0;
   white-space: normal;
   max-width: 100%;
-  margin-bottom: $spacer / 2;
+  margin-bottom: div($spacer, 2);
 }
 
 form {
@@ -30,6 +30,7 @@ form {
 
 label {
   @extend small;
+
   display: block;
   margin: 0;
   font-weight: $weight-normal;
@@ -40,7 +41,7 @@ label {
 [type="radio"] + label {
   display: inline-block;
   vertical-align: baseline;
-  margin-left: $spacer / 2;
+  margin-left: div($spacer, 2);
   margin-right: $spacer;
   margin-bottom: 0;
 
@@ -72,7 +73,7 @@ textarea {
   max-width: 100%;
   background-color: var(--background);
   color: var(--text);
-  border: 0.1rem solid var(--text-darken)
+  border: 0.1rem solid var(--text-darken);
 }
 
 button,

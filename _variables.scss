@@ -1,10 +1,20 @@
-$mobile: 36rem !default; // 576px
-$tablet: 48rem !default; // 768px
-$desktop: 80rem !default; // 1280px
-$fullhd: 120rem !default; // 1920px
+@import "utils/function";
+
+$sm: 36rem !default; // 576px
+$md: 48rem !default; // 768px
+$lg: 62rem !default; // 992px
+$xl: 75rem !default; // 1200px
+$xxl: 90rem !default; // 1440px
 
 $spacer: 1.6rem !default;
-$breakpoints: (mobile: $mobile, tablet: $tablet, desktop: $desktop, fullhd: $fullhd) !default;
+$spacer-sm: div($spacer, 4) !default;
+$spacer-md: div($spacer, 2) !default;
+$spacer-lg: $spacer * 2 !default;
+$spacer-xl: $spacer * 4 !default;
+$spacer-xxl: $spacer * 6 !default;
+
+$breakpoints: (sm: $sm, md: $md, lg: $lg, xl: $xl, xxl: $xxl) !default;
+$container: (sm: 0, md: 75rem, lg: 90rem, xl: 120rem, xxl: 120rem) !default;
 
 $black: hsl(0, 0%, 0%) !default;
 $grey-950: hsl(0, 0%, 4%) !default;
@@ -31,6 +41,7 @@ $heading: $grey-950 !default;
 $text: $grey-800 !default;
 $background: $white !default;
 
+/* Import */
 $greys: (
   'black': $black,
   'grey-950': $grey-950,
@@ -47,7 +58,6 @@ $greys: (
   'white': $white
 );
 
-/* Import */
 $colors: (
   'primary': $primary,
   'secondary': $secondary,
@@ -59,10 +69,9 @@ $colors: (
   'heading': $heading,
   'text': $text,
   'background': $background,
-  //'spacer': $spacer
 );
 
-$family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
+$family-primary: -apple-system, 'BlinkMacSystemFont', "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
 $family-secondary: $family-primary !default;
 $family-monospace: monospace !default;
 
@@ -87,9 +96,9 @@ $heading-font-weight: $weight-bold !default;
 $heading-line-height: 1.25 !default;
 
 /* Radius */
-$radius-small: .2rem !default;
-$radius: .4rem !default;
-$radius-large: .6rem !default;
+$radius-small: 0.2rem !default;
+$radius: 0.4rem !default;
+$radius-large: 0.8rem !default;
 $radius-rounded: 9999px !default;
 
 /* Animation */
@@ -97,4 +106,4 @@ $easing: cubic-bezier(0.075, 0.82, 0.165, 1) !default;
 $speed: 250ms !default;
 
 /* Shadow */
-$box-shadow: 0 .4rem 1rem var(--grey-950);
+$box-shadow: 0 0.4rem 1rem var(--grey-950);

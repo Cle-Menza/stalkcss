@@ -8,24 +8,24 @@ var {
 
 kbd {
   padding: 0 0.25em;
-  background-color: $grey-200;
+  background-color: var(--grey-200);
 }
 
 pre {
   overflow-y: hidden;
   page-break-inside: avoid;
-  border-left: .3rem solid $primary;
+  border-left: .3rem solid var(--primary);
 
   & > code {
     display: block;
     white-space: pre;
-    padding: $spacer $spacer * 1.25;
+    padding: $spacer $spacer-lg;
   }
 }
 
 code {
-  border: .1rem solid $grey-200;
-  background-color: $grey-200;
+  border: 1px solid var(--grey-200);
+  background-color: var(--grey-200);
   display: inline;
   max-width: 100%;
   word-wrap: break-word;
