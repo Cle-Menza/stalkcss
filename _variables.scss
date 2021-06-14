@@ -5,6 +5,7 @@ $md: 48rem !default; // 768px
 $lg: 62rem !default; // 992px
 $xl: 75rem !default; // 1200px
 $xxl: 90rem !default; // 1440px
+$xxxl: 120rem !default; // 1920px
 
 $spacer: 1.6rem !default;
 $spacer-sm: div($spacer, 4) !default;
@@ -14,7 +15,7 @@ $spacer-xl: $spacer * 4 !default;
 $spacer-xxl: $spacer * 6 !default;
 
 $breakpoints: (sm: $sm, md: $md, lg: $lg, xl: $xl, xxl: $xxl) !default;
-$container: (sm: 0, md: 75rem, lg: 90rem, xl: 120rem, xxl: 120rem) !default;
+$container: (sm: 0, md: $xl, lg: $xxl, xl: $xxxl, xxl: $xxxl) !default;
 
 $black: hsl(0, 0%, 0%) !default;
 $grey-950: hsl(0, 0%, 4%) !default;
@@ -30,16 +31,16 @@ $grey-100: hsl(0, 0%, 96%) !default;
 $grey-50: hsl(0, 0%, 98%) !default;
 $white: hsl(0, 0%, 100%) !default;
 
-$primary: #485fc7 !default;
-$secondary: #3d9c18 !default;
-$link: #485fc7 !default;
+$primary: #3da9fc !default;
+$secondary: #ef4565 !default;
+$link: #2A5DB0 !default;
 $info: #3e8ed0 !default;
 $success: #48c78e !default;
 $warning: #ffe08a !default;
 $danger: #f14668 !default;
-$heading: $grey-950 !default;
-$text: $grey-800 !default;
-$background: $white !default;
+$heading: #2b2c34 !default;
+$text: #2b2c34 !default;
+$background: #fffffe !default;
 
 /* Import */
 $greys: (

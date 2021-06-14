@@ -30,7 +30,7 @@ blockquote {
   margin-bottom: $spacer;
   padding: $spacer $spacer-lg;
   border-left: 0.3rem solid var(--primary-lighten);
-  background-color: var(--background-darken);
+  background-color: var(--grey-50);
 
   &:last-child {
     margin-bottom: 0;
@@ -53,7 +53,7 @@ hr {
   height: 0;
   overflow: visible;
   clear: both;
-  margin: $spacer-sm auto;
+  margin: $spacer auto;
   border-top: 0;
   border-right: 0;
   border-bottom: 1px solid var(--primary-darken);

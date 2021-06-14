@@ -12,3 +12,83 @@
     }
   }
 }
+
+.btn {
+  @extend small;
+  font-weight: $weight-medium;
+  padding: $spacer $spacer-lg;
+  margin: 0.125em;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  border-radius: $radius;
+  background-color: transparent;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  @include transition();
+
+  svg {
+    margin-left: 0.125em;
+    margin-right: 0.125em;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+    color: var(--primary);
+  }
+
+  &:active,
+  &:focus {
+    outline: 1px dotted #212121;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+
+  &#{&}--primary {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: var(--primary);
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: var(--grey-100);
+      background-color: var(--primary-lighten);
+      border-color: var(--primary-lighten);
+    }
+  }
+
+  &#{&}--secondary {
+    color: var(--white);
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: var(--grey-100);
+      background-color: var(--secondary-lighten);
+      border-color: var(--secondary-lighten);
+    }
+  }
+
+  &#{&}--outline {
+    border-color: var(--text);
+    color: var(--text);
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: var(--grey-100);
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
+  }
+}

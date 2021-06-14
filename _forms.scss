@@ -1,7 +1,7 @@
 fieldset {
   margin: $spacer 0;
   padding: $spacer;
-  border: 1px solid var(--grey-400);
+  border: 1px solid var(--grey-200);
 
   &[disabled] {
     pointer-events: none;
@@ -21,7 +21,7 @@ legend {
   padding: 0;
   white-space: normal;
   max-width: 100%;
-  margin-bottom: div($spacer, 2);
+  margin-bottom: $spacer-md;
 }
 
 form {
@@ -31,7 +31,7 @@ form {
 label {
   @extend small;
 
-  display: block;
+  display: inline-block;
   margin: 0;
   font-weight: $weight-normal;
   line-height: 1.8;
@@ -41,7 +41,7 @@ label {
 [type="radio"] + label {
   display: inline-block;
   vertical-align: baseline;
-  margin-left: div($spacer, 2);
+  margin-left: $spacer-md;
   margin-right: $spacer;
   margin-bottom: 0;
 
@@ -63,7 +63,6 @@ label {
 
 button,
 input,
-optgroup,
 select,
 textarea {
   font-family: inherit;
@@ -73,12 +72,58 @@ textarea {
   max-width: 100%;
   background-color: var(--background);
   color: var(--text);
-  border: 0.1rem solid var(--text-darken);
+  border: 1px solid var(--text-darken);
+}
+
+select,
+textarea,
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password],
+input[type=search],
+input[type=number],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=datetime],
+input[type=datetime-local],
+input[type=url] {
+  border-radius: $radius;
+  padding: $spacer;
+  width: 100%;
+}
+
+input, 
+button {
+  &[type=submit],
+  &[type=reset],
+  &[type=button] {
+    padding: $spacer;
+    border-radius: $radius;
+    cursor: pointer;
+  }
+}
+
+input[type=file] {
+  border-radius: $radius;
+}
+
+textarea {
+  max-width: 100%;
+  resize: vertical;
+  min-height: 3em;
 }
 
 button,
 input {
   overflow: visible;
+
+  &[disabled] {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+  }
 }
 
 button,
@@ -91,21 +136,15 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
-}
 
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
 
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
 }
 
 progress {
@@ -130,10 +169,10 @@ textarea {
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
-}
 
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
 }
 
 ::-webkit-file-upload-button {

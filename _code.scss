@@ -14,7 +14,8 @@ kbd {
 pre {
   overflow-y: hidden;
   page-break-inside: avoid;
-  border-left: .3rem solid var(--primary);
+  border-left: 3px solid var(--primary);
+  padding-left: $spacer;
 
   & > code {
     display: block;
