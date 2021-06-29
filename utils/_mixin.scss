@@ -37,7 +37,7 @@
     rgba($color, 0.1) $x div($y, 5.3333) div($blur, 4);
 }
 
-@mixin transition($prop: "all") {
+@mixin transition($prop: all) {
   transition-property: $prop;
   transition-duration: $speed;
   transition-timing-function: $easing;

@@ -1,11 +1,11 @@
 @import "utils/function";
 
-$sm: 36rem !default; // 576px
-$md: 48rem !default; // 768px
-$lg: 62rem !default; // 992px
-$xl: 75rem !default; // 1200px
-$xxl: 90rem !default; // 1440px
-$xxxl: 120rem !default; // 1920px
+$sm: 36em !default; // 576px
+$md: 48em !default; // 768px
+$lg: 62em !default; // 992px
+$xl: 75em !default; // 1200px
+$xxl: 90em !default; // 1440px
+$xxxl: 120em !default; // 1920px
 
 $spacer: 1.6rem !default;
 $spacer-sm: div($spacer, 4) !default;
@@ -15,7 +15,7 @@ $spacer-xl: $spacer * 4 !default;
 $spacer-xxl: $spacer * 6 !default;
 
 $breakpoints: (sm: $sm, md: $md, lg: $lg, xl: $xl, xxl: $xxl) !default;
-$container: (sm: 0, md: $xl, lg: $xxl, xl: $xxxl, xxl: $xxxl) !default;
+$container: (sm: 0, md: $md, lg: $lg, xl: $xl, xxl: $xxl) !default;
 
 $black: hsl(0, 0%, 0%) !default;
 $grey-950: hsl(0, 0%, 4%) !default;
